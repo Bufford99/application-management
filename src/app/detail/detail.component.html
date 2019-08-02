@@ -1,0 +1,31 @@
+<title>{{ applicant.name }}</title>
+<div class="card">
+  <div class="label header">Details</div>
+  <div class="detail-container">
+    <div class="cell border">
+      <div class="label item">Application ID</div>
+      <div class="detail-content">{{ applicant.id }}</div>
+    </div>
+
+    <div class="cell border">
+      <div class="label item">Position</div>
+      <div class="detail-content">{{ applicant.position }}</div>
+    </div>
+  
+    <div class="cell border">
+      <div class="label item">Date Applied</div>
+      <div class="detail-content">{{ applicant.applied }}</div>
+    </div>
+
+    <div class="cell">
+      <div class="label item">Experience</div>
+      <div class="detail-content">{{ applicant.experience }} years</div>      
+    </div>
+
+    <div class="cell full">
+      <div class="label item">Availability</div>
+      <div class="detail-content">{{ applicant.availability | asList }}</div>
+    </div>
+    
+  </div>
+</div>

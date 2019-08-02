@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: rgb(244, 244, 245);
+    font-family: Nunito, sans-serif;
+}
+
+.card {
+    width: 1200px;
+    background: #FFF;
+    margin: auto;
+    margin-top: 16px;
+    border: 1px solid #e9e9ea;
+
+    .label {
+        font-size: 12px;
+        font-weight: 700;
+        color: #3f51b5;
+        letter-spacing: 0.15px;
+        text-transform: uppercase;
+    }
+}

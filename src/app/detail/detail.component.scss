@@ -1,0 +1,35 @@
+// COLORS
+$blue-darker: #132584;
+
+.header {
+    padding-left: 16px;
+    padding-bottom: 24px;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 16px;
+    padding-top: 8px;
+
+    .cell {
+        padding-left: 16px;
+    }
+
+    .border {
+        border-right: 1px solid #e9e9ea;
+    }
+
+    .full {
+        grid-column-start: 1;
+    }
+
+    .item {
+        color: $blue-darker;
+        padding-bottom: 8px;
+    }
+}
+
+.card {
+    padding: 16px 16px 16px 0px;
+}

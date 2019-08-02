@@ -1,0 +1,7 @@
+$primary-color: #FFD700; // gold
+$font-stack: Helvetica, sans-serif;
+
+h1 {
+    font: 100% $font-stack;
+    background-color: $primary-color;
+}
