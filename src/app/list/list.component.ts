@@ -5,6 +5,8 @@ import applicants from '../../assets/data/applications.json';
 
 import { IApplicant } from '../types/applicant';
 
+import { NavbarComponent } from '../navbar/navbar.component';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -20,8 +22,7 @@ export class ListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // set control header
-    document.getElementById('control-header').innerHTML = 'Application Management';
+    NavbarComponent.setControlHeader('Application Management');
 
     // retrieve json data
     this.applicants = applicants;

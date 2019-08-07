@@ -22,4 +22,8 @@ export class NavbarComponent implements OnInit {
     window.alert('redirect to favourites');
   }
 
+  static setControlHeader(title: string): void {
+    document.getElementById('control-header').innerHTML = title;
+  }
+
 }

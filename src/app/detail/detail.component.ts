@@ -5,6 +5,8 @@ import applicants from '../../assets/data/applications.json';
 
 import { IApplicant } from '../types/applicant.js';
 
+import { NavbarComponent } from '../navbar/navbar.component';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -20,8 +22,7 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.applicant = this.retrieveApplicant();
 
-    // set control header
-    document.getElementById('control-header').innerHTML = this.applicant.name;
+    NavbarComponent.setControlHeader(this.applicant.name);
   }
 
   retrieveApplicant(): IApplicant {
