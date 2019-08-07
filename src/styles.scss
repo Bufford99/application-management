@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/colors.scss';
 
 html, body {
     margin: 0px;
@@ -13,11 +14,12 @@ html, body {
     margin: auto;
     margin-top: 16px;
     border: 1px solid #e9e9ea;
+    padding: 16px 16px;
 
     .label {
         font-size: 12px;
         font-weight: 700;
-        color: #3f51b5;
+        color: $blue-med;
         letter-spacing: 0.15px;
         text-transform: uppercase;
     }

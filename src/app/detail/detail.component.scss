@@ -1,7 +1,6 @@
-// COLORS
-$blue-darker: #132584;
+@import '../../assets/colors.scss';
 
-.header {
+.label {
     padding-left: 16px;
     padding-bottom: 24px;
 }
@@ -12,12 +11,16 @@ $blue-darker: #132584;
     grid-row-gap: 16px;
     padding-top: 8px;
 
+    .label {
+        padding: 0px;
+    }
+
     .cell {
         padding-left: 16px;
     }
 
     .border {
-        border-right: 1px solid #e9e9ea;
+        border-left: 1px solid #e9e9ea;
     }
 
     .full {

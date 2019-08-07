@@ -1,8 +1,10 @@
+@import '../../assets/colors.scss';
+
 table {
     width: 100%;
 
     th.mat-header-cell {
-        color: #132584;
+        color: $blue-darker;
         font-size: 14px;
         text-transform: uppercase;
     }
@@ -13,11 +15,7 @@ table {
     }
 
     tr.mat-row:hover {
-        background: #F4F4F5;
+        background: $light-gray;
         cursor: pointer;
     }
-}
-
-.card {
-    padding: 16px 16px;
 }

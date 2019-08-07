@@ -15,7 +15,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 export class ListComponent implements OnInit {
   applicants: IApplicant[];
   dataSource = applicants;
-  displayedColumns: string[] = ['id', 'name', 'position', 'applied', 'experience'];
+  displayedColumns = ['id', 'name', 'position', 'applied', 'experience'];
 
   constructor(
     private router: Router
