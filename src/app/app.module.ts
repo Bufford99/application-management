@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-import { MatButtonModule, MatTableModule } from '@angular/material';
+import { MatButtonModule, MatTableModule, MatSortModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 import { AsListPipe } from './pipes/as-list.pipe';
@@ -17,6 +18,7 @@ import { AsListPipe } from './pipes/as-list.pipe';
     NavbarComponent,
     ListComponent,
     DetailComponent,
+    
     AsListPipe
   ],
   imports: [
@@ -26,7 +28,10 @@ import { AsListPipe } from './pipes/as-list.pipe';
 
     // angular materials
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule,
+
+    BrowserAnimationsModule
 
   ],
   providers: [],

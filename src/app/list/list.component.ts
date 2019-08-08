@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSort, MatTableDataSource } from '@angular/material';
 
 import applicants from '../../assets/data/applications.json';
 
-import { IApplicant } from '../types/applicant';
-
 import { NavbarComponent } from '../navbar/navbar.component';
+
 
 @Component({
   selector: 'app-list',
@@ -13,9 +13,10 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  applicants: IApplicant[];
-  dataSource = applicants;
+  dataSource = new MatTableDataSource(applicants);
   displayedColumns = ['id', 'name', 'position', 'applied', 'experience'];
+
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(
     private router: Router
@@ -24,8 +25,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     NavbarComponent.setControlHeader('Application Management');
 
-    // retrieve json data
-    this.applicants = applicants;
+    this.dataSource.sort = this.sort;
   }
 
   showApplicationDetails(id: string): void {
