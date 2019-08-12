@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-import { MatButtonModule, MatTableModule, MatSortModule, MatPaginatorModule } from '@angular/material';
+import { MatButtonModule, MatTableModule, MatSortModule, MatPaginatorModule,
+         MatFormFieldModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
@@ -33,6 +34,8 @@ import 'hammerjs';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
 
     BrowserAnimationsModule
 

@@ -34,4 +34,8 @@ export class ListComponent implements OnInit {
     this.router.navigateByUrl('detail/' + id);
   }
 
+  applyFilter(filterValue) {
+    this.dataSource.filter = filterValue;
+  }
+
 }
