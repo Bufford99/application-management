@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { MatButtonModule, MatTableModule, MatSortModule, MatPaginatorModule,
-         MatFormFieldModule, MatInputModule } from '@angular/material';
+         MatFormFieldModule, MatInputModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
-import { AsListPipe } from './pipes/as-list.pipe';
+import { AvailabilityPipe } from './pipes/availability.pipe';
 
 import 'hammerjs';
 
@@ -22,7 +22,7 @@ import 'hammerjs';
     ListComponent,
     DetailComponent,
     
-    AsListPipe
+    AvailabilityPipe
   ],
   imports: [
     BrowserModule,
@@ -36,6 +36,7 @@ import 'hammerjs';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
+    MatListModule,
 
     BrowserAnimationsModule
 

@@ -23,13 +23,13 @@
         border-left: 1px solid #e9e9ea;
     }
 
-    .full {
-        grid-column-start: 1;
-    }
-
     .item {
         color: $blue-darker;
         padding-bottom: 8px;
+    }
+
+    .mat-list-item {
+        height: 40px;
     }
 }
 

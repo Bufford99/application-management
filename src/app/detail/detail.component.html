@@ -22,9 +22,23 @@
       <div class="detail-content">{{ applicant.experience }} years</div>      
     </div>
 
-    <div class="cell full">
+    <div class="cell">
       <div class="label item">Availability</div>
-      <div class="detail-content">{{ applicant.availability | asList }}</div>
+      <div class="detail-content">
+        <mat-list>
+          <mat-list-item>Monday: {{ applicant.availability.M | availability}}</mat-list-item>
+          <mat-list-item>Tuesday: {{ applicant.availability.T | availability }}</mat-list-item>
+          <mat-list-item>Wednesday: {{ applicant.availability.W | availability }}</mat-list-item>
+          <mat-list-item>Thursday: {{ applicant.availability.Th | availability }}</mat-list-item>
+          <mat-list-item>Friday: {{ applicant.availability.F | availability }}</mat-list-item>
+          <mat-list-item>Saturday: {{ applicant.availability.S | availability }}</mat-list-item>
+          <mat-list-item>Sunday: {{ applicant.availability.Su | availability }}</mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+
+    <div class="cell border">
+      <div class="label item">Questions</div>
     </div>
     
   </div>
