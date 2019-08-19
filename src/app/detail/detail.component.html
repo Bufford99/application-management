@@ -11,7 +11,7 @@
       <div class="label item">Position</div>
       <div class="detail-content">{{ applicant.position }}</div>
     </div>
-  
+
     <div class="cell border">
       <div class="label item">Date Applied</div>
       <div class="detail-content">{{ applicant.applied }}</div>
@@ -19,27 +19,25 @@
 
     <div class="cell border">
       <div class="label item">Experience</div>
-      <div class="detail-content">{{ applicant.experience }} years</div>      
+      <div class="detail-content">{{ applicant.experience }} years</div>
     </div>
 
     <div class="cell">
       <div class="label item">Availability</div>
-      <div class="detail-content">
-        <mat-list>
-          <mat-list-item>Monday: {{ applicant.availability.M | availability}}</mat-list-item>
-          <mat-list-item>Tuesday: {{ applicant.availability.T | availability }}</mat-list-item>
-          <mat-list-item>Wednesday: {{ applicant.availability.W | availability }}</mat-list-item>
-          <mat-list-item>Thursday: {{ applicant.availability.Th | availability }}</mat-list-item>
-          <mat-list-item>Friday: {{ applicant.availability.F | availability }}</mat-list-item>
-          <mat-list-item>Saturday: {{ applicant.availability.S | availability }}</mat-list-item>
-          <mat-list-item>Sunday: {{ applicant.availability.Su | availability }}</mat-list-item>
-        </mat-list>
-      </div>
+      <ul class="detail-content">
+        <li>Monday: {{ applicant.availability.M | availability}}</li>
+        <li>Tuesday: {{ applicant.availability.T | availability }}</li>
+        <li>Wednesday: {{ applicant.availability.W | availability }}</li>
+        <li>Thursday: {{ applicant.availability.Th | availability }}</li>
+        <li>Friday: {{ applicant.availability.F | availability }}</li>
+        <li>Saturday: {{ applicant.availability.S | availability }}</li>
+        <li>Sunday: {{ applicant.availability.Su | availability }}</li>
+      </ul>
     </div>
 
     <div class="cell border">
       <div class="label item">Questions</div>
     </div>
-    
+
   </div>
 </div>
