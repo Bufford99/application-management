@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
   redirectToFavourites(): void {
-    window.alert('redirect to favourites');
+    window.alert('**Favourites page in progress**\nNote: I wonder how long xD');
   }
 
   static setControlHeader(title: string): void {
