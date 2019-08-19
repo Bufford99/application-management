@@ -27,6 +27,19 @@
         color: $blue-darker;
         padding-bottom: 8px;
     }
+
+    .full {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .questionText {
+        font-style: italic;
+    }
+
+    .questionAnswer {
+        padding-left: 16px;
+    }
 }
 
 .card {

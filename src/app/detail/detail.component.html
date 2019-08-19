@@ -35,8 +35,14 @@
       </ul>
     </div>
 
-    <div class="cell border">
+    <div class="cell border full">
       <div class="label item">Questions</div>
+      <ul class="detail-content">
+        <div *ngFor="let question of applicant.questions">
+          <li class="questionText">{{ question.text }}</li>
+          <li class="questionAnswer">{{ question.answer }} </li>
+        </div>
+      </ul>
     </div>
 
   </div>
