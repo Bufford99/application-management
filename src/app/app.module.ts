@@ -11,7 +11,7 @@ import { MatButtonModule, MatTableModule, MatSortModule, MatPaginatorModule,
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
-import { AsListPipe } from './pipes/as-list.pipe';
+import { AvailabilityPipe } from './pipes/availability.pipe';
 
 import 'hammerjs';
 
@@ -22,7 +22,7 @@ import 'hammerjs';
     ListComponent,
     DetailComponent,
     
-    AsListPipe
+    AvailabilityPipe
   ],
   imports: [
     BrowserModule,

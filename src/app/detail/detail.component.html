@@ -11,7 +11,7 @@
       <div class="label item">Position</div>
       <div class="detail-content">{{ applicant.position }}</div>
     </div>
-  
+
     <div class="cell border">
       <div class="label item">Date Applied</div>
       <div class="detail-content">{{ applicant.applied }}</div>
@@ -19,13 +19,31 @@
 
     <div class="cell border">
       <div class="label item">Experience</div>
-      <div class="detail-content">{{ applicant.experience }} years</div>      
+      <div class="detail-content">{{ applicant.experience }} years</div>
     </div>
 
-    <div class="cell full">
+    <div class="cell">
       <div class="label item">Availability</div>
-      <div class="detail-content">{{ applicant.availability | asList }}</div>
+      <ul class="detail-content">
+        <li>Monday: {{ applicant.availability.M | availability}}</li>
+        <li>Tuesday: {{ applicant.availability.T | availability }}</li>
+        <li>Wednesday: {{ applicant.availability.W | availability }}</li>
+        <li>Thursday: {{ applicant.availability.Th | availability }}</li>
+        <li>Friday: {{ applicant.availability.F | availability }}</li>
+        <li>Saturday: {{ applicant.availability.S | availability }}</li>
+        <li>Sunday: {{ applicant.availability.Su | availability }}</li>
+      </ul>
     </div>
-    
+
+    <div class="cell border full">
+      <div class="label item">Questions</div>
+      <ul class="detail-content">
+        <div *ngFor="let question of applicant.questions">
+          <li class="questionText">{{ question.text }}</li>
+          <li class="questionAnswer">{{ question.answer }} </li>
+        </div>
+      </ul>
+    </div>
+
   </div>
 </div>
