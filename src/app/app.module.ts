@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -14,6 +15,7 @@ import { DetailComponent } from './detail/detail.component';
 import { AvailabilityPipe } from './pipes/availability.pipe';
 
 import 'hammerjs';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import 'hammerjs';
     ListComponent,
     DetailComponent,
     
-    AvailabilityPipe
+    AvailabilityPipe,
+    
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import 'hammerjs';
     MatFormFieldModule,
     MatInputModule,
 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule
 
   ],
   providers: [],
