@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AvailabilityPipe implements PipeTransform {
 
-  transform(data: number, args?: any): string {
+  transform(data: number): string {
     const availability = {
       '0': 'Unavailable',
       '1': 'All-day',
