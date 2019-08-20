@@ -14,8 +14,4 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() { }
 
-  static setControlHeader(title: string): void {
-    document.getElementById('control-header').innerHTML = title;
-  }
-
 }

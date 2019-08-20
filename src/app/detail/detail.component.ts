@@ -5,7 +5,6 @@ import applicants from '../../assets/data/applications.json';
 
 import { IApplicant } from '../types/applicant.js';
 
-import { NavbarComponent } from '../navbar/navbar.component';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -23,9 +22,11 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.applicant = this.retrieveApplicant();
-    this.titleService.setTitle(this.applicant.name);
 
-    NavbarComponent.setControlHeader(this.applicant.name);
+    // set titles and headers
+    this.titleService.setTitle(this.applicant.name);
+    document.getElementById('control-header').innerHTML = this.applicant.name;
+
   }
 
   retrieveApplicant(): IApplicant {

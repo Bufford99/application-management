@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-favourites',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouritesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit() {
+
+    // set titles and headers
+    this.titleService.setTitle('Favourites');
+    document.getElementById('control-header').innerHTML = 'Favourites';
   }
 
 }
