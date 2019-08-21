@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import applicants from '../../assets/data/applications.json';
 
@@ -17,6 +17,7 @@ export class DetailComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private titleService: Title
   ) { }
 
@@ -30,10 +31,9 @@ export class DetailComponent implements OnInit {
   }
 
   retrieveApplicant(): IApplicant {
-    const url = this.router.url;
-    const applicationID = Number(url.slice(url.lastIndexOf('/') + 1 ));
-
-    return applicants[applicationID - 1];
+    const applicationID = this.route.snapshot.params.id;
+    
+    return applicants.find((app: IApplicant) => app.id == applicationID);
   }
 
 }
