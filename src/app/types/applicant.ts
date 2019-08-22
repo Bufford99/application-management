@@ -1,5 +1,5 @@
 export interface IApplicant {
-    id: string;
+    id: number;
     name: string;
     position: string;
     applied: Date;
