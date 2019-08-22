@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import applicants from '../../assets/data/applications.json';
 
 import { IApplicant } from '../types/applicant.js';
 
-import { NavbarComponent } from '../navbar/navbar.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail',
@@ -16,20 +16,24 @@ export class DetailComponent implements OnInit {
   applicant: IApplicant;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
+    private titleService: Title
   ) { }
 
   ngOnInit() {
     this.applicant = this.retrieveApplicant();
 
-    NavbarComponent.setControlHeader(this.applicant.name);
+    // set titles and headers
+    this.titleService.setTitle(this.applicant.name);
+    document.getElementById('control-header').innerHTML = this.applicant.name;
+
   }
 
   retrieveApplicant(): IApplicant {
-    const url = this.router.url;
-    const applicationID = Number(url.slice(url.lastIndexOf('/') + 1 ));
-
-    return applicants[applicationID - 1];
+    const applicationID = this.route.snapshot.params.id;
+    
+    return applicants.find((app: IApplicant) => app.id == applicationID);
   }
 
 }

@@ -4,7 +4,7 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 
 import applicants from '../../assets/data/applications.json';
 
-import { NavbarComponent } from '../navbar/navbar.component';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -20,11 +20,15 @@ export class ListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit() {
-    NavbarComponent.setControlHeader('Application Management');
+
+    // set titles and headers
+    this.titleService.setTitle('Application Management');
+    document.getElementById('control-header').innerHTML = 'Application Management';
 
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;

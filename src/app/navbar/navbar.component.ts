@@ -14,16 +14,4 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() { }
 
-  redirectToHome(): void {
-    this.router.navigateByUrl('home');
-  }
-
-  redirectToFavourites(): void {
-    window.alert('**Favourites page in progress**\nNote: I wonder how long xD');
-  }
-
-  static setControlHeader(title: string): void {
-    document.getElementById('control-header').innerHTML = title;
-  }
-
 }
